@@ -32,3 +32,11 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+.next-tf
+.terraform
+.terraform*
+terraform.tfstate*
+
+.env
+env.sh

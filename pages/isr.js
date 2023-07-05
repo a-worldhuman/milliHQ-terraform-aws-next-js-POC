@@ -3,7 +3,13 @@ import { getRandomAPI } from '../publicApis';
 
 export default Page;
 
-export async function getStaticProps() {
+export async function getStaticProps(...data) {
     const props = await getRandomAPI();
-    return { props, revalidate: 30 };
+    console.log('+++', data);
+    console.log('+++++++++++++++++++++ getStaticProps - ISR', props);
+
+    return {
+        props,
+        revalidate: 30
+    };
 }
